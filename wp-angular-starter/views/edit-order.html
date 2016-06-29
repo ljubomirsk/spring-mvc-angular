@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<div data-ng-controller="OrderController" data-ng-init="findOrder()">
+    <h1 class="text-center">Edit order</h1>
+    <form name="pizzaForm" data-ng-submit="update()">
+        <div class="form-group pView">
+            <label>Approved:</label>
+            <input type="checkbox" class="form-control" data-ng-model="pizza.type"/>
+        </div><br/>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Update</button>
+            <button type="button" class="btn btn-default" ui-sref="order-admin">Cancel</button>
+        </div>
+    </form>
+    <div class="help-block" data-ng-if="err">{{err}}</div>
+</div>
+</html>

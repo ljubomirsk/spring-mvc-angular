@@ -1,0 +1,10 @@
+<div data-ng-controller="OrderController" data-ng-init="getOrder()">
+	<h1 class="text-center">View Order</h1>
+	<label class="viewOrder">Order Id:</label><span data-ng-bind="::order.orderId"></span><br/>
+	<label class="viewOrder">Client Name:</label><span data-ng-bind="::order.clientName"></span><br/>
+	<label class="viewOrder">Client Address:</label><span data-ng-bind="::order.clientAddress"></span><br/>
+	<label class="viewOrder">Pizza Id:</label><span data-ng-bind="::order.pizza.id"></span><br/>
+	<label class="viewOrder">Pizza type:</label><span data-ng-bind="::order.pizza.type"></span><br/>
+	<button type="button" ui-sref="order-admin" class="btn btn-sm btn-default">Back</button>
+	<div class="help-block" data-ng-if="err">{{err}}</div>
+</div>

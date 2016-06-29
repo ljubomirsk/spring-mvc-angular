@@ -1,0 +1,486 @@
+2016-02-04 14:08:05,073 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 14:08:05,201 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 14:08:05 CET 2016]; root of context hierarchy
+2016-02-04 14:08:05,248 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 14:08:05,407 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 14:08:05,973 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 14:08:06,766 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 14:08:06,936 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 14:08:09,481 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 14:08:09,502 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 14:08:09,522 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 14:08:10,850 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 14:08:12,349 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 14:08:13,456 INFO [localhost-startStop-1] o.h.h.i.a.ASTQueryTranslatorFactory [ASTQueryTranslatorFactory.java:47] HHH000397: Using ASTQueryTranslatorFactory
+2016-02-04 14:08:13,997 INFO [localhost-startStop-1] o.h.v.i.u.Version [Version.java:27] HV000001: Hibernate Validator 5.1.3.Final
+2016-02-04 14:08:16,549 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:207] HHH000228: Running hbm2ddl schema update
+2016-02-04 14:08:16,550 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:218] HHH000102: Fetching database metadata
+2016-02-04 14:08:16,561 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:230] HHH000396: Updating schema
+2016-02-04 14:08:16,596 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:08:16,601 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:08:16,606 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:08:16,611 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:08:16,616 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:08:16,621 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:08:19,270 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:267] HHH000232: Schema update complete
+2016-02-04 14:08:19,905 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:325] Root WebApplicationContext: initialization completed in 14824 ms
+2016-02-04 14:08:19,934 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:485] FrameworkServlet 'springDispatcher': initialization started
+2016-02-04 14:08:19,938 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:08:19 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:08:19,939 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2016-02-04 14:08:19,980 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2016-02-04 14:08:20,414 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.getOrder(java.lang.Long)
+2016-02-04 14:08:20,415 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/create/order],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.createOrder(mk.ukim.finki.wp.model.Order)
+2016-02-04 14:08:20,415 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/pizza],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Pizza> mk.ukim.finki.wp.web.PizzaOrderController.listPizzas()
+2016-02-04 14:08:20,416 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/delete/{id}],methods=[DELETE],produces=[application/json]}" onto public void mk.ukim.finki.wp.web.PizzaOrderController.deletePizza(java.lang.Long)
+2016-02-04 14:08:20,416 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.getPizza(java.lang.Long)
+2016-02-04 14:08:20,417 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/create],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.createPizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:08:20,417 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/update/pizza],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.updatePizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:08:20,418 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/order],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Order> mk.ukim.finki.wp.web.PizzaOrderController.listOrders()
+2016-02-04 14:08:20,824 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:08:19 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:08:20,887 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:08:19 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:08:21,060 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-04 14:08:21,076 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-02-04 14:08:21,087 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-02-04 14:08:21,128 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:504] FrameworkServlet 'springDispatcher': initialization completed in 1193 ms
+2016-02-04 14:10:32,509 WARN [http-bio-8080-exec-3] o.h.e.j.s.SqlExceptionHelper [SqlExceptionHelper.java:144] SQL Error: 1451, SQLState: 23000
+2016-02-04 14:10:32,512 ERROR [http-bio-8080-exec-3] o.h.e.j.s.SqlExceptionHelper [SqlExceptionHelper.java:146] Cannot delete or update a parent row: a foreign key constraint fails (`wp`.`orders`, CONSTRAINT `FK_ltwq4gorxop8wnsroqwcwc58q` FOREIGN KEY (`pizza_id`) REFERENCES `pizzas` (`id`))
+2016-02-04 14:10:32,533 INFO [http-bio-8080-exec-3] o.h.e.j.b.i.AbstractBatchImpl [AbstractBatchImpl.java:208] HHH000010: On release of batch it still contained JDBC statements
+2016-02-04 14:10:32,536 WARN [http-bio-8080-exec-3] o.h.e.j.s.SqlExceptionHelper [SqlExceptionHelper.java:232] SQL Warning Code: 1451, SQLState: 23000
+2016-02-04 14:10:32,537 WARN [http-bio-8080-exec-3] o.h.e.j.s.SqlExceptionHelper [SqlExceptionHelper.java:233] Cannot delete or update a parent row: a foreign key constraint fails (`wp`.`orders`, CONSTRAINT `FK_ltwq4gorxop8wnsroqwcwc58q` FOREIGN KEY (`pizza_id`) REFERENCES `pizzas` (`id`))
+2016-02-04 14:18:53,356 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 14:18:53,458 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 14:18:53 CET 2016]; root of context hierarchy
+2016-02-04 14:18:53,518 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 14:18:53,714 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 14:18:54,186 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 14:18:54,462 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 14:18:54,507 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 14:18:54,756 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 14:18:54,759 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 14:18:54,761 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 14:18:55,046 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 14:18:55,673 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 14:18:56,357 INFO [localhost-startStop-1] o.h.h.i.a.ASTQueryTranslatorFactory [ASTQueryTranslatorFactory.java:47] HHH000397: Using ASTQueryTranslatorFactory
+2016-02-04 14:18:56,452 INFO [localhost-startStop-1] o.h.v.i.u.Version [Version.java:27] HV000001: Hibernate Validator 5.1.3.Final
+2016-02-04 14:18:57,071 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:207] HHH000228: Running hbm2ddl schema update
+2016-02-04 14:18:57,071 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:218] HHH000102: Fetching database metadata
+2016-02-04 14:18:57,074 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:230] HHH000396: Updating schema
+2016-02-04 14:18:57,080 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:18:57,083 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:18:57,086 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:18:57,087 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:18:57,090 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:18:57,091 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:18:58,743 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:267] HHH000232: Schema update complete
+2016-02-04 14:18:59,105 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:325] Root WebApplicationContext: initialization completed in 5745 ms
+2016-02-04 14:18:59,141 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:485] FrameworkServlet 'springDispatcher': initialization started
+2016-02-04 14:18:59,146 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:18:59 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:18:59,147 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2016-02-04 14:18:59,190 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2016-02-04 14:18:59,573 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.getOrder(java.lang.Long)
+2016-02-04 14:18:59,575 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/delete/{id}],methods=[DELETE],produces=[application/json]}" onto public void mk.ukim.finki.wp.web.PizzaOrderController.deletePizza(java.lang.Long)
+2016-02-04 14:18:59,576 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/create/order],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.createOrder(mk.ukim.finki.wp.model.Order)
+2016-02-04 14:18:59,576 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/pizza],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Pizza> mk.ukim.finki.wp.web.PizzaOrderController.listPizzas()
+2016-02-04 14:18:59,577 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/create],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.createPizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:18:59,577 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/update/pizza],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.updatePizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:18:59,578 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/order],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Order> mk.ukim.finki.wp.web.PizzaOrderController.listOrders()
+2016-02-04 14:18:59,578 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.getPizza(java.lang.Long)
+2016-02-04 14:19:00,112 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:18:59 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:19:00,197 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:18:59 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:19:00,286 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-04 14:19:00,295 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-02-04 14:19:00,304 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-02-04 14:19:00,353 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:504] FrameworkServlet 'springDispatcher': initialization completed in 1211 ms
+2016-02-04 14:22:35,992 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 14:22:36,147 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 14:22:36 CET 2016]; root of context hierarchy
+2016-02-04 14:22:36,189 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 14:22:36,304 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 14:22:36,790 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 14:22:37,073 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 14:22:37,101 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 14:22:37,323 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 14:22:37,327 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 14:22:37,330 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 14:22:37,666 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 14:22:38,307 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 14:22:38,947 INFO [localhost-startStop-1] o.h.h.i.a.ASTQueryTranslatorFactory [ASTQueryTranslatorFactory.java:47] HHH000397: Using ASTQueryTranslatorFactory
+2016-02-04 14:22:39,034 INFO [localhost-startStop-1] o.h.v.i.u.Version [Version.java:27] HV000001: Hibernate Validator 5.1.3.Final
+2016-02-04 14:22:39,606 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:207] HHH000228: Running hbm2ddl schema update
+2016-02-04 14:22:39,607 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:218] HHH000102: Fetching database metadata
+2016-02-04 14:22:39,610 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:230] HHH000396: Updating schema
+2016-02-04 14:22:39,663 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:22:39,666 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:22:39,668 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:22:39,670 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:22:39,673 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:22:39,675 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:22:41,124 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:267] HHH000232: Schema update complete
+2016-02-04 14:22:41,475 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:325] Root WebApplicationContext: initialization completed in 5477 ms
+2016-02-04 14:22:41,510 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:485] FrameworkServlet 'springDispatcher': initialization started
+2016-02-04 14:22:41,515 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:22:41 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:22:41,516 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2016-02-04 14:22:41,553 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2016-02-04 14:22:41,959 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/update/pizza],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.updatePizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:22:41,960 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.getPizza(java.lang.Long)
+2016-02-04 14:22:41,960 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/create],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.createPizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:22:41,961 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/order],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Order> mk.ukim.finki.wp.web.PizzaOrderController.listOrders()
+2016-02-04 14:22:41,961 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.getOrder(java.lang.Long)
+2016-02-04 14:22:41,961 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/delete/{id}],methods=[DELETE],produces=[application/json]}" onto public void mk.ukim.finki.wp.web.PizzaOrderController.deletePizza(java.lang.Long)
+2016-02-04 14:22:41,962 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/create/order],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.createOrder(mk.ukim.finki.wp.model.Order)
+2016-02-04 14:22:41,962 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/pizza],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Pizza> mk.ukim.finki.wp.web.PizzaOrderController.listPizzas()
+2016-02-04 14:22:42,422 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:22:41 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:22:42,492 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:22:41 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:22:42,580 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-04 14:22:42,591 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-02-04 14:22:42,602 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-02-04 14:22:42,647 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:504] FrameworkServlet 'springDispatcher': initialization completed in 1136 ms
+2016-02-04 14:23:49,191 WARN [http-bio-8080-exec-6] o.h.e.j.s.SqlExceptionHelper [SqlExceptionHelper.java:144] SQL Error: 1451, SQLState: 23000
+2016-02-04 14:23:49,192 ERROR [http-bio-8080-exec-6] o.h.e.j.s.SqlExceptionHelper [SqlExceptionHelper.java:146] Cannot delete or update a parent row: a foreign key constraint fails (`wp`.`orders`, CONSTRAINT `FK_ltwq4gorxop8wnsroqwcwc58q` FOREIGN KEY (`pizza_id`) REFERENCES `pizzas` (`id`))
+2016-02-04 14:23:49,194 INFO [http-bio-8080-exec-6] o.h.e.j.b.i.AbstractBatchImpl [AbstractBatchImpl.java:208] HHH000010: On release of batch it still contained JDBC statements
+2016-02-04 14:23:49,195 WARN [http-bio-8080-exec-6] o.h.e.j.s.SqlExceptionHelper [SqlExceptionHelper.java:232] SQL Warning Code: 1451, SQLState: 23000
+2016-02-04 14:23:49,195 WARN [http-bio-8080-exec-6] o.h.e.j.s.SqlExceptionHelper [SqlExceptionHelper.java:233] Cannot delete or update a parent row: a foreign key constraint fails (`wp`.`orders`, CONSTRAINT `FK_ltwq4gorxop8wnsroqwcwc58q` FOREIGN KEY (`pizza_id`) REFERENCES `pizzas` (`id`))
+2016-02-04 14:26:13,194 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 14:26:13,325 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 14:26:13 CET 2016]; root of context hierarchy
+2016-02-04 14:26:13,375 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 14:26:13,509 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 14:26:14,030 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 14:26:14,330 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 14:26:14,357 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 14:26:14,590 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 14:26:14,593 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 14:26:14,595 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 14:26:14,824 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 14:26:15,407 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 14:26:15,888 WARN [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [spring/persistence-config.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: wp] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:956) ~[spring-context-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:747) ~[spring-context-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:434) [spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306) [spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106) [spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: wp] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:1249) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.access$600(EntityManagerFactoryBuilderImpl.java:120) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:860) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:343) ~[spring-orm-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) ~[spring-orm-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	... 21 common frames omitted
+Caused by: org.hibernate.AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements: mk.ukim.finki.wp.model.Pizza.id
+	at org.hibernate.cfg.annotations.CollectionBinder.getCollectionBinder(CollectionBinder.java:331) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1922) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:963) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:796) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3845) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3799) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1412) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	... 29 common frames omitted
+2016-02-04 14:26:15,891 ERROR [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:331] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [spring/persistence-config.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: wp] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:956) ~[spring-context-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:747) ~[spring-context-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:434) ~[spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306) ~[spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106) [spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549) [tomcat-embed-core-7.0.47.jar:7.0.47]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_31]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_31]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: wp] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:1249) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.access$600(EntityManagerFactoryBuilderImpl.java:120) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:860) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:343) ~[spring-orm-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318) ~[spring-orm-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570) ~[spring-beans-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	... 21 common frames omitted
+Caused by: org.hibernate.AnnotationException: Illegal attempt to map a non collection as a @OneToMany, @ManyToMany or @CollectionOfElements: mk.ukim.finki.wp.model.Pizza.id
+	at org.hibernate.cfg.annotations.CollectionBinder.getCollectionBinder(CollectionBinder.java:331) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1922) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:963) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:796) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3845) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3799) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1412) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846) ~[hibernate-core-4.3.10.Final.jar:4.3.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
+	... 29 common frames omitted
+2016-02-04 14:27:06,033 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 14:27:06,135 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 14:27:06 CET 2016]; root of context hierarchy
+2016-02-04 14:27:06,198 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 14:27:06,326 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 14:27:06,858 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 14:27:07,174 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 14:27:07,222 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 14:27:07,500 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 14:27:07,505 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 14:27:07,508 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 14:27:07,840 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 14:27:08,648 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 14:27:09,283 INFO [localhost-startStop-1] o.h.h.i.a.ASTQueryTranslatorFactory [ASTQueryTranslatorFactory.java:47] HHH000397: Using ASTQueryTranslatorFactory
+2016-02-04 14:27:09,377 INFO [localhost-startStop-1] o.h.v.i.u.Version [Version.java:27] HV000001: Hibernate Validator 5.1.3.Final
+2016-02-04 14:27:10,128 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:207] HHH000228: Running hbm2ddl schema update
+2016-02-04 14:27:10,128 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:218] HHH000102: Fetching database metadata
+2016-02-04 14:27:10,133 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:230] HHH000396: Updating schema
+2016-02-04 14:27:10,141 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:27:10,144 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:27:10,146 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:27:10,148 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:27:10,151 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 14:27:10,153 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 14:27:11,785 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:267] HHH000232: Schema update complete
+2016-02-04 14:27:12,487 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:325] Root WebApplicationContext: initialization completed in 6450 ms
+2016-02-04 14:27:12,575 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:485] FrameworkServlet 'springDispatcher': initialization started
+2016-02-04 14:27:12,581 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:27:12 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:27:12,582 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2016-02-04 14:27:12,751 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2016-02-04 14:27:13,551 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.getOrder(java.lang.Long)
+2016-02-04 14:27:13,552 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/pizza],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Pizza> mk.ukim.finki.wp.web.PizzaOrderController.listPizzas()
+2016-02-04 14:27:13,553 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/delete/{id}],methods=[DELETE],produces=[application/json]}" onto public void mk.ukim.finki.wp.web.PizzaOrderController.deletePizza(java.lang.Long)
+2016-02-04 14:27:13,553 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/create/order],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.createOrder(mk.ukim.finki.wp.model.Order)
+2016-02-04 14:27:13,554 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/order],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Order> mk.ukim.finki.wp.web.PizzaOrderController.listOrders()
+2016-02-04 14:27:13,554 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/update/pizza],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.updatePizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:27:13,555 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/create],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.createPizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:27:13,555 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.getPizza(java.lang.Long)
+2016-02-04 14:27:14,124 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:27:12 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:27:14,212 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:27:12 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:27:14,348 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-04 14:27:14,364 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-02-04 14:27:14,378 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-02-04 14:27:14,429 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:504] FrameworkServlet 'springDispatcher': initialization completed in 1854 ms
+2016-02-04 14:43:19,438 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 14:43:19,776 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 14:43:19 CET 2016]; root of context hierarchy
+2016-02-04 14:43:19,857 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 14:43:22,650 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 14:43:23,063 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 14:43:23,847 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 14:43:24,001 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 14:43:25,116 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 14:43:25,147 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 14:43:25,168 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 14:43:26,213 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 14:43:28,261 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 14:43:30,008 INFO [localhost-startStop-1] o.h.h.i.a.ASTQueryTranslatorFactory [ASTQueryTranslatorFactory.java:47] HHH000397: Using ASTQueryTranslatorFactory
+2016-02-04 14:43:30,529 INFO [localhost-startStop-1] o.h.v.i.u.Version [Version.java:27] HV000001: Hibernate Validator 5.1.3.Final
+2016-02-04 14:43:33,033 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:207] HHH000228: Running hbm2ddl schema update
+2016-02-04 14:43:33,035 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:218] HHH000102: Fetching database metadata
+2016-02-04 14:43:33,043 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:230] HHH000396: Updating schema
+2016-02-04 14:43:33,235 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:65] HHH000261: Table found: wp.orders
+2016-02-04 14:43:33,237 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:66] HHH000037: Columns: [clientaddress, orderid, clientname, pizza_id]
+2016-02-04 14:43:33,238 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:68] HHH000108: Foreign keys: [fk_ltwq4gorxop8wnsroqwcwc58q]
+2016-02-04 14:43:33,239 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:69] HHH000126: Indexes: [primary, fk_ltwq4gorxop8wnsroqwcwc58q]
+2016-02-04 14:43:33,265 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:65] HHH000261: Table found: wp.pizzas
+2016-02-04 14:43:33,266 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:66] HHH000037: Columns: [id, type]
+2016-02-04 14:43:33,267 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:68] HHH000108: Foreign keys: []
+2016-02-04 14:43:33,267 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:69] HHH000126: Indexes: [primary]
+2016-02-04 14:43:33,269 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:267] HHH000232: Schema update complete
+2016-02-04 14:43:33,770 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:325] Root WebApplicationContext: initialization completed in 14308 ms
+2016-02-04 14:43:33,804 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:485] FrameworkServlet 'springDispatcher': initialization started
+2016-02-04 14:43:33,807 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:43:33 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:43:33,808 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2016-02-04 14:43:33,870 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2016-02-04 14:43:34,587 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.getOrder(java.lang.Long)
+2016-02-04 14:43:34,587 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/create/order],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.createOrder(mk.ukim.finki.wp.model.Order)
+2016-02-04 14:43:34,588 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/pizza],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Pizza> mk.ukim.finki.wp.web.PizzaOrderController.listPizzas()
+2016-02-04 14:43:34,588 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/delete/{id}],methods=[DELETE],produces=[application/json]}" onto public void mk.ukim.finki.wp.web.PizzaOrderController.deletePizza(java.lang.Long)
+2016-02-04 14:43:34,589 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/create],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.createPizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:43:34,589 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.getPizza(java.lang.Long)
+2016-02-04 14:43:34,589 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/update/pizza],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.updatePizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 14:43:34,590 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/order],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Order> mk.ukim.finki.wp.web.PizzaOrderController.listOrders()
+2016-02-04 14:43:35,752 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:43:33 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:43:35,831 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 14:43:33 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 14:43:35,958 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-04 14:43:35,979 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-02-04 14:43:35,991 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-02-04 14:43:36,022 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:504] FrameworkServlet 'springDispatcher': initialization completed in 2217 ms
+2016-02-04 15:28:15,282 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 15:28:15,458 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 15:28:15 CET 2016]; root of context hierarchy
+2016-02-04 15:28:15,519 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 15:28:15,735 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 15:28:16,293 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 15:28:16,898 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 15:28:17,004 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 15:28:17,500 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 15:28:17,514 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 15:28:17,517 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 15:28:17,934 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 15:28:19,083 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 15:28:21,336 INFO [localhost-startStop-1] o.h.h.i.a.ASTQueryTranslatorFactory [ASTQueryTranslatorFactory.java:47] HHH000397: Using ASTQueryTranslatorFactory
+2016-02-04 15:28:22,548 INFO [localhost-startStop-1] o.h.v.i.u.Version [Version.java:27] HV000001: Hibernate Validator 5.1.3.Final
+2016-02-04 15:28:23,422 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:207] HHH000228: Running hbm2ddl schema update
+2016-02-04 15:28:23,422 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:218] HHH000102: Fetching database metadata
+2016-02-04 15:28:23,425 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:230] HHH000396: Updating schema
+2016-02-04 15:28:23,430 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 15:28:23,432 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 15:28:23,433 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 15:28:23,435 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 15:28:23,436 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 15:28:23,438 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 15:28:24,922 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:267] HHH000232: Schema update complete
+2016-02-04 15:28:25,630 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:325] Root WebApplicationContext: initialization completed in 10342 ms
+2016-02-04 15:28:25,668 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:485] FrameworkServlet 'springDispatcher': initialization started
+2016-02-04 15:28:25,674 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 15:28:25 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 15:28:25,676 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2016-02-04 15:28:25,745 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2016-02-04 15:28:26,513 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.getPizza(java.lang.Long)
+2016-02-04 15:28:26,515 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/create],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.createPizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 15:28:26,517 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/order],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Order> mk.ukim.finki.wp.web.PizzaOrderController.listOrders()
+2016-02-04 15:28:26,519 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/update/pizza],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.updatePizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 15:28:26,519 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.getOrder(java.lang.Long)
+2016-02-04 15:28:26,520 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/create/order],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.createOrder(mk.ukim.finki.wp.model.Order)
+2016-02-04 15:28:26,521 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/pizza],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Pizza> mk.ukim.finki.wp.web.PizzaOrderController.listPizzas()
+2016-02-04 15:28:26,522 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/delete/{id}],methods=[DELETE],produces=[application/json]}" onto public void mk.ukim.finki.wp.web.PizzaOrderController.deletePizza(java.lang.Long)
+2016-02-04 15:28:27,377 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 15:28:25 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 15:28:27,437 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 15:28:25 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 15:28:27,550 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-04 15:28:27,562 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-02-04 15:28:27,569 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-02-04 15:28:27,598 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:504] FrameworkServlet 'springDispatcher': initialization completed in 1929 ms
+2016-02-04 17:31:27,101 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 17:31:27,297 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 17:31:27 CET 2016]; root of context hierarchy
+2016-02-04 17:31:27,449 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 17:31:27,799 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 17:31:28,255 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 17:31:28,582 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 17:31:28,634 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 17:31:29,065 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 17:31:29,074 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 17:31:29,077 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 17:31:29,462 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 17:31:30,806 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 17:31:31,778 INFO [localhost-startStop-1] o.h.h.i.a.ASTQueryTranslatorFactory [ASTQueryTranslatorFactory.java:47] HHH000397: Using ASTQueryTranslatorFactory
+2016-02-04 17:31:31,911 INFO [localhost-startStop-1] o.h.v.i.u.Version [Version.java:27] HV000001: Hibernate Validator 5.1.3.Final
+2016-02-04 17:31:32,651 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:207] HHH000228: Running hbm2ddl schema update
+2016-02-04 17:31:32,651 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:218] HHH000102: Fetching database metadata
+2016-02-04 17:31:32,654 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:230] HHH000396: Updating schema
+2016-02-04 17:31:32,659 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 17:31:32,661 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 17:31:32,662 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 17:31:32,664 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 17:31:32,665 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: orders
+2016-02-04 17:31:32,667 INFO [localhost-startStop-1] j.s.DatabaseMetaData [DatabaseMetadata.java:147] HHH000262: Table not found: pizzas
+2016-02-04 17:31:34,205 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:267] HHH000232: Schema update complete
+2016-02-04 17:31:34,712 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:325] Root WebApplicationContext: initialization completed in 7590 ms
+2016-02-04 17:31:34,743 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:485] FrameworkServlet 'springDispatcher': initialization started
+2016-02-04 17:31:34,747 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 17:31:34 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 17:31:34,748 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2016-02-04 17:31:34,802 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2016-02-04 17:31:35,274 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.getOrder(java.lang.Long)
+2016-02-04 17:31:35,275 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/pizza],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Pizza> mk.ukim.finki.wp.web.PizzaOrderController.listPizzas()
+2016-02-04 17:31:35,276 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/delete/{id}],methods=[DELETE],produces=[application/json]}" onto public void mk.ukim.finki.wp.web.PizzaOrderController.deletePizza(java.lang.Long)
+2016-02-04 17:31:35,276 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/create/order],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.createOrder(mk.ukim.finki.wp.model.Order)
+2016-02-04 17:31:35,277 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/update/pizza],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.updatePizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 17:31:35,277 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/create],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.createPizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 17:31:35,277 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/update/{id}],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.updateOrder(java.lang.Long)
+2016-02-04 17:31:35,279 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.getPizza(java.lang.Long)
+2016-02-04 17:31:35,279 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/order],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Order> mk.ukim.finki.wp.web.PizzaOrderController.listOrders()
+2016-02-04 17:31:36,018 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 17:31:34 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 17:31:36,094 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 17:31:34 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 17:31:36,206 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-04 17:31:36,216 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-02-04 17:31:36,247 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-02-04 17:31:36,286 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:504] FrameworkServlet 'springDispatcher': initialization completed in 1543 ms
+2016-02-04 17:52:27,965 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:285] Root WebApplicationContext: initialization started
+2016-02-04 17:52:28,128 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing Root WebApplicationContext: startup date [Thu Feb 04 17:52:28 CET 2016]; root of context hierarchy
+2016-02-04 17:52:28,185 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/business-config.xml]
+2016-02-04 17:52:28,641 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/persistence-config.xml]
+2016-02-04 17:52:29,068 INFO [localhost-startStop-1] o.s.c.s.PropertySourcesPlaceholderConfigurer [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [spring/data-access.properties]
+2016-02-04 17:52:29,583 INFO [localhost-startStop-1] o.s.o.j.LocalContainerEntityManagerFactoryBean [LocalContainerEntityManagerFactoryBean.java:339] Building JPA container EntityManagerFactory for persistence unit 'wp'
+2016-02-04 17:52:29,645 INFO [localhost-startStop-1] o.h.j.i.u.LogHelper [LogHelper.java:46] HHH000204: Processing PersistenceUnitInfo [
+	name: wp
+	...]
+2016-02-04 17:52:29,978 INFO [localhost-startStop-1] o.h.Version [Version.java:54] HHH000412: Hibernate Core {4.3.10.Final}
+2016-02-04 17:52:29,987 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:239] HHH000206: hibernate.properties not found
+2016-02-04 17:52:29,989 INFO [localhost-startStop-1] o.h.c.Environment [Environment.java:346] HHH000021: Bytecode provider name : javassist
+2016-02-04 17:52:30,319 INFO [localhost-startStop-1] o.h.a.c.Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-04 17:52:33,288 INFO [localhost-startStop-1] o.h.d.Dialect [Dialect.java:145] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-02-04 17:52:34,018 INFO [localhost-startStop-1] o.h.h.i.a.ASTQueryTranslatorFactory [ASTQueryTranslatorFactory.java:47] HHH000397: Using ASTQueryTranslatorFactory
+2016-02-04 17:52:34,230 INFO [localhost-startStop-1] o.h.v.i.u.Version [Version.java:27] HV000001: Hibernate Validator 5.1.3.Final
+2016-02-04 17:52:35,002 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:207] HHH000228: Running hbm2ddl schema update
+2016-02-04 17:52:35,003 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:218] HHH000102: Fetching database metadata
+2016-02-04 17:52:35,006 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:230] HHH000396: Updating schema
+2016-02-04 17:52:35,448 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:65] HHH000261: Table found: wp.orders
+2016-02-04 17:52:35,450 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:66] HHH000037: Columns: [approved, clientaddress, orderid, clientname, pizza_id]
+2016-02-04 17:52:35,451 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:68] HHH000108: Foreign keys: [fk_ltwq4gorxop8wnsroqwcwc58q]
+2016-02-04 17:52:35,452 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:69] HHH000126: Indexes: [primary, fk_ltwq4gorxop8wnsroqwcwc58q]
+2016-02-04 17:52:35,518 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:65] HHH000261: Table found: wp.pizzas
+2016-02-04 17:52:35,520 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:66] HHH000037: Columns: [id, type]
+2016-02-04 17:52:35,520 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:68] HHH000108: Foreign keys: []
+2016-02-04 17:52:35,521 INFO [localhost-startStop-1] o.h.t.h.TableMetadata [TableMetadata.java:69] HHH000126: Indexes: [primary]
+2016-02-04 17:52:35,523 INFO [localhost-startStop-1] o.h.t.h.SchemaUpdate [SchemaUpdate.java:267] HHH000232: Schema update complete
+2016-02-04 17:52:35,876 INFO [localhost-startStop-1] o.s.w.c.ContextLoader [ContextLoader.java:325] Root WebApplicationContext: initialization completed in 7896 ms
+2016-02-04 17:52:35,916 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:485] FrameworkServlet 'springDispatcher': initialization started
+2016-02-04 17:52:35,921 INFO [localhost-startStop-1] o.s.w.c.s.XmlWebApplicationContext [AbstractApplicationContext.java:510] Refreshing WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 17:52:35 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 17:52:35,921 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+2016-02-04 17:52:35,981 INFO [localhost-startStop-1] o.s.b.f.x.XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+2016-02-04 17:52:36,394 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.getOrder(java.lang.Long)
+2016-02-04 17:52:36,395 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/create],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.createPizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 17:52:36,395 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/{id}],methods=[GET],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.getPizza(java.lang.Long)
+2016-02-04 17:52:36,396 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/update/pizza],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Pizza mk.ukim.finki.wp.web.PizzaOrderController.updatePizza(mk.ukim.finki.wp.model.Pizza)
+2016-02-04 17:52:36,396 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/order/update/{id}],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.updateOrder(java.lang.Long)
+2016-02-04 17:52:36,397 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/order],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Order> mk.ukim.finki.wp.web.PizzaOrderController.listOrders()
+2016-02-04 17:52:36,398 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/create/order],methods=[POST],produces=[application/json]}" onto public mk.ukim.finki.wp.model.Order mk.ukim.finki.wp.web.PizzaOrderController.createOrder(mk.ukim.finki.wp.model.Order)
+2016-02-04 17:52:36,399 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/pizza/delete/{id}],methods=[DELETE],produces=[application/json]}" onto public void mk.ukim.finki.wp.web.PizzaOrderController.deletePizza(java.lang.Long)
+2016-02-04 17:52:36,399 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:217] Mapped "{[/api/list/pizza],methods=[GET],produces=[application/json]}" onto public java.util.List<mk.ukim.finki.wp.model.Pizza> mk.ukim.finki.wp.web.PizzaOrderController.listPizzas()
+2016-02-04 17:52:36,988 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 17:52:35 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 17:52:37,046 INFO [localhost-startStop-1] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:517] Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcher-servlet': startup date [Thu Feb 04 17:52:35 CET 2016]; parent: Root WebApplicationContext
+2016-02-04 17:52:37,141 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-04 17:52:37,155 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:301] Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-02-04 17:52:37,168 INFO [localhost-startStop-1] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:314] Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-02-04 17:52:37,219 INFO [localhost-startStop-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:504] FrameworkServlet 'springDispatcher': initialization completed in 1302 ms

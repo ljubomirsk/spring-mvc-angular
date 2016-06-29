@@ -1,0 +1,42 @@
+<div data-ng-controller="PizzaController" data-ng-init="init()">
+	<h1 class="text-center">Manage Pizza</h1>
+	
+	<div class="well well-sm">
+		<button type="button" class="btn btn-sm btn-success" data-ng-click="displayAddType()"><i class="glyphicon glyphicon-plus"></i>Add Pizza Type</button>
+	</div>
+
+	<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+		<thead>
+			<tr>
+				<th>Pizza Id</th>
+				<th>Pizza Type</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in displayedCollection">
+				<td data-ng-bind="::row.id"></td>
+				<td data-ng-bind="row.type"></td>
+				<td>
+					<button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit" ui-sref="update-pizza({pizzaId: row.id})">
+						<span class="glyphicon glyphicon-edit"></span>
+					</button>
+					<button type="button" ng-click="removePizza(row)" data-toggle="tooltip" title="Delete" class="btn btn-sm btn-danger">
+						<span class="glyphicon glyphicon-remove-sign"></span>
+					</button>
+				</td>
+			</tr>
+			<tr data-ng-if="show">
+				<td>Pizza Type:</td>
+				<td>
+					<input type="text" class="form-control" data-ng-model="pizza.type"/>
+				</td>
+				<td>
+					<button type="button" data-ng-click="create()" class="btn btn-sm btn-success">Add</button>
+					<button type="button" data-ng-click="displayAddType()" class="btn btn-sm btn-danger">X</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="help-block" data-ng-if="err">{{err}}</div>
+</div>

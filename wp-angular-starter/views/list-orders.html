@@ -1,0 +1,47 @@
+<div data-ng-controller="OrderController" data-ng-init="findAll()">
+	<h1 class="text-center">List Orders</h1>
+	<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-hover">
+		<thead>
+			<tr>
+				<th>Order Id</th>
+				<th>Client Name</th>
+				<th>Client Address</th>
+				<th st-sort="pizza.type">Pizza Type</th>
+				<th>Approved</th>
+				<th>Edit</th>
+			</tr>
+			<tr>
+				<th colspan="3">
+					<input type="text" st-search="clientAddress" placeholder="Search by address..." class="form-control" />
+				</th>
+				<th>
+					<select st-search="pizza.type">
+						<option>
+						<option ng-repeat="row in rowCollection | unique:'pizza.type'" value="{{row.pizza.type}}">{{row.pizza.type}}</option> value="">All</option>
+						<option ng-repeat="row in rowCollection | unique:'pizza.type'" value="{{row.pizza.type}}">{{row.pizza.type}}</option>
+					</select>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="row in displayedCollection" >
+				<td data-ng-bind="::row.orderId"></td>
+				<td data-ng-bind="::row.clientName"></td>
+				<td data-ng-bind="::row.clientAddress"></td>
+				<td data-ng-bind="::row.pizza.type"></td>
+				<td data-ng-bind="::row.approved"></td>
+				<td>
+					<button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit" ui-sref="update-order({orderId: row.id})">
+						<span class="glyphicon glyphicon-edit"></span>
+					</button>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<td colspan="4" class="text-center">
+					<div st-pagination="" st-items-by-page="10" st-displayed-pages="5"></div>
+				</td>
+		</tfoot>
+	</table>
+	<div class="help-block" data-ng-if="err">{{err}}</div>
+</div>

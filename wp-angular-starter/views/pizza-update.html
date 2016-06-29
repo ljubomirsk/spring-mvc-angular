@@ -1,0 +1,14 @@
+<div data-ng-controller="PizzaController" data-ng-init="findPizza()">
+	<h1 class="text-center">Edit pizza</h1>
+	<form name="pizzaForm" data-ng-submit="update()">
+		<div class="form-group pView">
+			<label>Type:</label>
+			<input type="text" class="form-control" data-ng-model="pizza.type"/>
+		</div><br/>
+		<div class="text-center">
+			<button type="submit" class="btn btn-success">Update</button>
+			<button type="button" class="btn btn-default" ui-sref="pizza-type-admin">Cancel</button>
+		</div>
+	</form>
+	<div class="help-block" data-ng-if="err">{{err}}</div>
+</div>

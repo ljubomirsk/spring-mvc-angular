@@ -1,0 +1,18 @@
+
+.viewOrder {
+	width: 100px;
+	margin-right: 10px;
+}
+
+tbody tr {
+	cursor: pointer;
+}
+
+tbody tr:hover{
+	background-color: lightgrey !important;
+}
+
+.pView {
+	width: 200px;
+    margin: auto;
+}
